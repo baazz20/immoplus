@@ -17,11 +17,12 @@
                     <div class="col-md-8 ml-auto mr-auto ">
                         <h2 class="title text-center"> Détails du bien</h2>
                         <div>
-                            <?php foreach ($params['post']->getTags() as $tag) : ?>
-                                <blockquote  class="blockquote">
+                        <blockquote  class="blockquote">
                                     <span>Type de maison : </span>
-                                    <span class="badge badge-primary"><?= $tag->name ?></span>
-                                    <span class="h1" STYLE="padding:0 0 0 90px;"><?= $params['post']->price ?> FCFA</span><br>
+                                    <?php foreach ($params['post']->getTags() as $tag) : ?>
+                                    <a href="/tags/<?= $tag->id ?>" class="badge badge-primary"><?= $tag->name ?></a>
+                                    <?php endforeach ?>
+                                    <span class="h1" STYLE="padding:0 0 0 90px;"><?= $params['post']->price ?>F</span><br>
                                     <span>Nombre de pieces : </span>
                                     <span class="badge badge-primary"><?= $params['post']->nb_piece ?></span><br>
                                     <span>Surface : </span>
@@ -30,7 +31,9 @@
                                    
                                 </blockquote>
                                 
-                            <?php endforeach ?>
+                            
+                              
+                            
                         </div>
                     </div>
                 </div>

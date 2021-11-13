@@ -13,5 +13,6 @@ $router = new Router($_GET['url']);
 $router->get('/', 'App\Controllers\immoController@welcome');
 $router->get('/posts', 'App\Controllers\immoController@index');
 $router->get('/posts/:id', 'App\Controllers\immoController@show');
+$router->get('/tags/:id', 'App\Controllers\immoController@tag');
 
 $router->run();

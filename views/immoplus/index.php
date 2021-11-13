@@ -12,7 +12,7 @@
                 <h2 class="category"> <?= $post->title ?> </h2>
                 <div>
                     <?php foreach ($post->getTags() as $tag) : ?>
-                        <span class="badge badge-primary"><?= $tag->name ?></span>
+                        <a href="/tags/<?= $tag->id ?>" class="badge badge-primary"><?= $tag->name ?></a>
                     <?php endforeach ?>
                 </div>
                 <small class="text-info">Publié le <?= $post->getCreatedAt() ?></small>

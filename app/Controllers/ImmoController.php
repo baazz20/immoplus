@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Controllers\Controller;
+use App\Models\Tag;
 use App\Models\Post;
+use App\Controllers\Controller;
 
 
 class ImmoController extends Controller{
@@ -26,5 +27,12 @@ class ImmoController extends Controller{
 
 
         return $this->view('immoplus.show', compact('post'));
+    }
+
+    public function tag( int $id){
+        $tag = (new Tag($this->getDB()))->findById($id);
+
+        return $this->view('immoplus.tag', compact('tag'));
+        
     }
 }
