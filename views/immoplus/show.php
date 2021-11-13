@@ -1,24 +1,13 @@
 <div class="container col-xl mr-auto">
-<div class="invisible mb-5">...</div>
+    <div class="invisible mb-2">...</div>
 
-<div class="wrapper">
+    <div class="wrapper">
         <div class="page-header page-header-small">
-            <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/bg6.jpg');">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('../../public/asset/img/bg6.jpg');">
             </div>
             <div class="content-center">
                 <div class="container">
-                    <h1 class="title">This is our great company.</h1>
-                    <div class="text-center">
-                        <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                        <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                            <i class="fab fa-google-plus"></i>
-                        </a>
-                    </div>
+                    <h1 class="title"> <?= $params['post']->title ?></h1>
                 </div>
             </div>
         </div>
@@ -26,7 +15,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
-                        <h2 class="title">Who we are?</h2>
+                        <h2 class="title"> Détails du bien</h2>
                         <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent
                             in the Barents Sea.</h5>
                     </div>
@@ -35,104 +24,52 @@
                 <div class="section-story-overview">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="image-container image-left" style="background-image: url('../assets/img/login.jpg')">
+                            <div class="image-container image-left" style="background-image: url('../../public/asset/img/login.jpg')">
                                 <!-- First image on the left side -->
-                                <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                                <p class="blockquote blockquote-primary"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15889.760782122295!2d-3.99805845!3d5.3495874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sci!4v1636787642099!5m2!1sfr!2sci" width="175" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                     <br>
                                     <br>
-                                    <small>-NOAA</small>
+                                    <small>-LOCALISATION</small>
                                 </p>
                             </div>
                             <!-- Second image on the left side of the article -->
-                            <div class="image-container" style="background-image: url('../assets/img/bg3.jpg')"></div>
+                            <div class="image-container" style="background-image: url('../../public/asset/img/bg3.jpg')"></div>
                         </div>
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
-                            <div class="image-container image-right" style="background-image: url('../assets/img/bg1.jpg')"></div>
-                            <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
-                            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions
-                                of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                            </p>
-                            <p>
-                                For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the
-                                more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
-                            </p>
-                            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions
-                                of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                            </p>
+                            <div class="image-container image-right" style="background-image: url('../../public/asset/img/bg1.jpg')"></div>
+                            <h3>description</h3>
+                            <p><?= $params['post']->content ?></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section section-team text-center">
-            <div class="container">
-                <h2 class="title">Here is our team</h2>
-                <div class="team">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src="../assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                                <h4 class="title">Romina Hadid</h4>
-                                <p class="category text-primary">Model</p>
-                                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-instagram"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src="../assets/img/ryan.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                                <h4 class="title">Ryan Tompson</h4>
-                                <p class="category text-primary">Designer</p>
-                                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src="../assets/img/eva.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                                <h4 class="title">Eva Jenner</h4>
-                                <p class="category text-primary">Fashion</p>
-                                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="section section-contact-us text-center">
             <div class="container">
-                <h2 class="title">Want to work with us?</h2>
-                <p class="description">Your project is very important to us.</p>
+                <h2 class="title">Contacter l'agent Immobilier</h2>
+                <p class="description">Votre projet est très important pour nous.</p>
                 <div class="row">
                     <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
                         <div class="input-group input-lg">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                  <i class="now-ui-icons users_circle-08"></i>
-                </span>
+                                    <i class="now-ui-icons users_circle-08"></i>
+                                </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="First Name...">
+                            <input type="text" class="form-control" placeholder="Votre Nom et prénom...">
                         </div>
                         <div class="input-group input-lg">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                  <i class="now-ui-icons ui-1_email-85"></i>
-                </span>
+                                    <i class="now-ui-icons ui-1_email-85"></i>
+                                </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Email...">
+                            <input type="text" class="form-control" placeholder="Votre Email...">
                         </div>
                         <div class="textarea-container">
-                            <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                            <textarea class="form-control" name="name" rows="4" cols="80" placeholder="tapez votre méssage..."></textarea>
                         </div>
                         <div class="send-button">
                             <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
@@ -147,18 +84,18 @@
                     <ul>
                         <li>
                             <a href="https://www.creative-tim.com">
-                Creative Tim
-              </a>
+                                Creative Tim
+                            </a>
                         </li>
                         <li>
                             <a href="http://presentation.creative-tim.com">
-                About Us
-              </a>
+                                About Us
+                            </a>
                         </li>
                         <li>
                             <a href="http://blog.creative-tim.com">
-                Blog
-              </a>
+                                Blog
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -173,5 +110,5 @@
             </div>
         </footer>
     </div>
-    
+
 </div>

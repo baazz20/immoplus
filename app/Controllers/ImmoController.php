@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\Controller;
+use App\Models\Post;
+
 
 class ImmoController extends Controller{
     public function welcome(){
@@ -11,18 +13,17 @@ class ImmoController extends Controller{
     }
     public function index(){
 
-        $stmt = $this->db->getPDO()->query('SELECT * FROM posts ORDER BY created_at DESC');
-        $posts = $stmt->fetchAll();
+        $post = new Post($this->getDB());
+        $posts = $post->all();
         
-
         return $this->view('immoplus.index', compact('posts'));
     }
 
     public function show(int $id){
 
-        $stmt = $this->db->getPDO()->prepare('SELECT * FROM posts WHERE id = ?');
-        $stmt->execute([$id]);
-        $post = $stmt->fetch();
+        $post = new Post($this->getDB());
+        $post = $post->findById($id);
+
 
         return $this->view('immoplus.show', compact('post'));
     }
