@@ -9,7 +9,7 @@
     <div class="row">
         <?php foreach ($params['posts'] as $post) : ?>
             <div class="col-md-10 ml-auto col-xl-4 mr-auto">
-                <p class="category"> <?= $post->title ?> <br> <small><?= $post->created_at ?></small></p>
+                <p class="category"> <?= $post->title ?> <br> <small class="badge badge-info">Publié le <?= $post->getCreatedAt() ?></small></p>
 
                 <!-- Nav tabs -->
                 <div class="card">
@@ -76,8 +76,8 @@
                                 </div>
                             </div>
                             <div class="tab-pane" id="profile_<?= $post->id ?>" role="tabpanel">
-                                <p> <?= mb_strimwidth($post->content, 0, 200, "...") ?></p>
-                                <a href="/posts/<?= $post->id ?>" class="btn btn-primary btn-round">Plus de details</a>
+                                <p> <?= $post->getExcerpt() ?></p>
+                                <?= $post->getButton() ?>
                             </div>
                             <div class="tab-pane" id="messages_<?= $post->id ?>" role="tabpanel">
                                 <h1><?= $post->price ?> FCFA</h1>
