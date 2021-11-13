@@ -5,19 +5,25 @@ namespace App\Controllers;
 use App\Controllers\Controller;
 
 class ImmoController extends Controller{
+    public function welcome(){
 
+        return $this->view('immoplus.welcome');
+    }
     public function index(){
 
-        return $this->view('immoplus.index');
+        $stmt = $this->db->getPDO()->query('SELECT * FROM posts ORDER BY created_at DESC');
+        $posts = $stmt->fetchAll();
+        
+
+        return $this->view('immoplus.index', compact('posts'));
     }
 
     public function show(int $id){
 
-        $rep = $this->db->getPDO()->query('SELECT * FROM posts');
-        $posts = $rep->fetchAll();
-        foreach ($posts as $post) {
-            echo $post->title;
-        }
-        return $this->view('immoplus.show', compact('id'));
+        $stmt = $this->db->getPDO()->prepare('SELECT * FROM posts WHERE id = ?');
+        $stmt->execute([$id]);
+        $post = $stmt->fetch();
+
+        return $this->view('immoplus.show', compact('post'));
     }
 }
