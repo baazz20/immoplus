@@ -14,10 +14,24 @@
         <div class="section section-about-us">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto text-center">
-                        <h2 class="title"> Détails du bien</h2>
-                        <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent
-                            in the Barents Sea.</h5>
+                    <div class="col-md-8 ml-auto mr-auto ">
+                        <h2 class="title text-center"> Détails du bien</h2>
+                        <div>
+                            <?php foreach ($params['post']->getTags() as $tag) : ?>
+                                <blockquote  class="blockquote">
+                                    <span>Type de maison : </span>
+                                    <span class="badge badge-primary"><?= $tag->name ?></span>
+                                    <span class="h1" STYLE="padding:0 0 0 90px;"><?= $params['post']->price ?> FCFA</span><br>
+                                    <span>Nombre de pieces : </span>
+                                    <span class="badge badge-primary"><?= $params['post']->nb_piece ?></span><br>
+                                    <span>Surface : </span>
+                                    <span class="badge badge-primary"><?= $params['post']->surface ?> M²</span><br>
+                                    <div class="invisible mb-2">...</div>
+                                   
+                                </blockquote>
+                                
+                            <?php endforeach ?>
+                        </div>
                     </div>
                 </div>
                 <div class="separator separator-primary"></div>

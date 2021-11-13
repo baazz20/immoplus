@@ -1,5 +1,5 @@
 <div class="container col-xl mr-auto">
-<div class="invisible mb-3">...</div>
+    <div class="invisible mb-3">...</div>
 
     <div class="title">
         <h4>TOUTES LES ANONCES</h4>
@@ -9,7 +9,13 @@
     <div class="row">
         <?php foreach ($params['posts'] as $post) : ?>
             <div class="col-md-10 ml-auto col-xl-4 mr-auto">
-                <p class="category"> <?= $post->title ?> <br> <small class="badge badge-info">Publié le <?= $post->getCreatedAt() ?></small></p>
+                <h2 class="category"> <?= $post->title ?> </h2>
+                <div>
+                    <?php foreach ($post->getTags() as $tag) : ?>
+                        <span class="badge badge-primary"><?= $tag->name ?></span>
+                    <?php endforeach ?>
+                </div>
+                <small class="text-info">Publié le <?= $post->getCreatedAt() ?></small>
 
                 <!-- Nav tabs -->
                 <div class="card">
